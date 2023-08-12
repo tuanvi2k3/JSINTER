@@ -46,3 +46,39 @@ function danhSachChiaHetCho6(n) {
   return ketqua;
 }
 console.log(danhSachChiaHetCho6(15));
+
+// 9. Viết hàm trả ra danh sách tất cả các số nhỏ hơn n và chia hết cho m
+//      - danhSachChiaHet(n,m):[]
+//      - Ví dụ: danhSachChiaHet(10,4) sẽ trả ra một mảng [0,4,8]
+
+function danhSachChiaHet(n, m) {
+  const result = [];
+  for (let i = 0; i < n; i++) {
+    if (i % m === 0) {
+      result.push(i);
+    }
+  }
+  return result;
+}
+
+const ketQua = danhSachChiaHet(10, 4);
+console.log(ketQua);
+
+// 10. Viết hàm cộng tất c ả các phần tử trong mảng với n
+//      - congMang(arr, n): []
+//      - Đầu vào là một mảng và n
+//      - Đầu ra là một mảng mà tất cả các số được cộng với n
+//      - Ví dụ: arr = [1,2,3]; n=3
+// - Kết quả trả ra của hàm: [4,5,6]
+
+function congMang(arr, n) {
+  const result = [];
+  for (let i = 0; i < arr.length; i++) {
+    result.push(arr[i] + n);
+  }
+  return result;
+}
+
+const n = 3;
+const ketQ = congMang([1, 2, 3], n);
+console.log(ketQ);
